@@ -1,11 +1,10 @@
 import Base from "../layout/Base";
-export default function Contact() {
+export default function About() {
     return (
         <>
             <Base>
-                <h1>Contact</h1>
+                <h1>About Us</h1>
             </Base>
         </>
     );
 }
-

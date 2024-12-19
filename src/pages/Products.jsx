@@ -1,8 +1,11 @@
 import ProductList from "../components/ProductList";
+import Base from "../layout/Base";
 export default function Products() {
     return (
         <>
-        <ProductList />
+            <Base>
+                <ProductList />
+            </Base>
         </>
     );
 }

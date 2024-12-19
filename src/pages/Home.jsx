@@ -1,9 +1,10 @@
-
+import Base from "../layout/Base";
 export default function Home() {
     return (
         <>
-            <h1>Home</h1>
-            <p>Welcome to the Home page!</p>
+            <Base>
+                <h1>Home</h1>
+            </Base>
         </>
     );
 }
