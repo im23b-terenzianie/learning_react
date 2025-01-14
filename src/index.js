@@ -9,6 +9,7 @@ import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Productdetails from "./pages/Productdetails";
+import Search from "./pages/Search";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ root.render(
               <Route path="/contact" element={<Contact/>}/>
               <Route path="/about" element={<About/>}/>
               <Route path="/products/:id" element={<Productdetails/>}/>
+              <Route path="/search" element={<Search/>}/>
           </Routes>
       </BrowserRouter>
     <App />
