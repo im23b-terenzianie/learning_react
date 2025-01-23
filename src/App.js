@@ -9,22 +9,27 @@ import About from "./pages/About";
 import Productdetails from "./pages/Productdetails";
 import Search from "./pages/Search";
 import React from "react";
-import ThemeContext from "./context/ThemeContext";
+import ThemeContext from "./context/Theme";
+import CartContext from "./context/Cart";
+
 function App() {
   const [theme, setTheme] = React.useState('light');
+  const [cart, setCart] = React.useState([]);
 
   return (
-      <ThemeContext.Provider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/products" element={<Products/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/products/:id" element={<Productdetails/>}/>
-          <Route path="/search" element={<Search/>}/>
-        </Routes>
-      </BrowserRouter>
+      <ThemeContext.Provider value={[theme, setTheme]}>
+        <CartContext.Provider value={[cart, setCart]}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/products" element={<Products/>}/>
+              <Route path="/contact" element={<Contact/>}/>
+              <Route path="/about" element={<About/>}/>
+              <Route path="/products/:id" element={<Productdetails/>}/>
+              <Route path="/search" element={<Search/>}/>
+            </Routes>
+          </BrowserRouter>
+        </CartContext.Provider>
       </ThemeContext.Provider>
   );
 }
