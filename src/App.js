@@ -1,6 +1,5 @@
 
 import './App.css';
-import ProductList from './components/ProductList';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
@@ -11,6 +10,7 @@ import Search from "./pages/Search";
 import React from "react";
 import ThemeContext from "./context/Theme";
 import CartContext from "./context/Cart";
+import Cart from "./pages/Cart";
 
 function App() {
   const [theme, setTheme] = React.useState('light');
@@ -27,6 +27,7 @@ function App() {
               <Route path="/about" element={<About/>}/>
               <Route path="/products/:id" element={<Productdetails/>}/>
               <Route path="/search" element={<Search/>}/>
+              <Route path="/cart" element={<Cart/>}/>
             </Routes>
           </BrowserRouter>
         </CartContext.Provider>

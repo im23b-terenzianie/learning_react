@@ -22,7 +22,7 @@ export default function Base({children}) {
                  <Link to="/products">Products</Link>
                  <Link to="/contact">Contact</Link>
                  <Link to="/About">About Us</Link>
-                 <Link to="/warenkorb">Warenkorb ({cart.length})</Link>
+                 <Link to="/Cart">Cart ({cart.length})</Link>
              </nav>
          </header>
          <main className="p-10">
